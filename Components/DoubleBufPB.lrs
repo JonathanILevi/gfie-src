@@ -1,0 +1,41 @@
+(*
+	Greenfish Controls - Double-buffered paint box
+	Copyright © 2013 Balázs Szalkai
+	This file is released under the zlib license:
+
+	This software is provided 'as-is', without any express or implied
+	warranty. In no event will the authors be held liable for any damages
+	arising from the use of this software.
+
+	Permission is granted to anyone to use this software for any purpose,
+	including commercial applications, and to alter it and redistribute it
+	freely, subject to the following restrictions:
+
+	   1. The origin of this software must not be misrepresented; you must not
+	   claim that you wrote the original software. If you use this software
+	   in a product, an acknowledgment in the product documentation would be
+	   appreciated but is not required.
+
+	   2. Altered source versions must be plainly marked as such, and must not be
+	   misrepresented as being the original software.
+
+	   3. This notice may not be removed or altered from any source
+	   distribution.
+*)
+LazarusResources.Add('TDoubleBufPB','PNG',[
+  #137'PNG'#13#10#26#10#0#0#0#13'IHDR'#0#0#0#24#0#0#0#24#8#6#0#0#0#224'w='#248#0
+  +#0#1#28'IDATH'#199#221#149#189'j'#195'0'#20'FOL'#210#197#143#224'IK&yJ'#192
+  +#217'b'#186#249#17#250' '#153#218#130' '#238#148#161#143#209'G'#232#22#154'M'
+  +'C;'#217'SG'#143#6#15#30#4#197')'#180#147'CLc'#252#147#186#180#253'@'#232'"}'
+  +#186'GBW'#8#254#186'Fe'#160#148#250#248#206#196'J'#169#17#192#248'x'#240#246
+  +'r'#215#184'0'#8''''#135#248#241'f'#127#210#179#222'.'#15#241#184#203#174#130
+  +'p'#130#231'y'#0#24'c'#8#194#184#22'R'#202#234'zt'#223#247'q]'#183#181#191'3'
+  +' '#203'2'#146'$'#25#14#0#144#231#249'p'#128'('#138':'#249#173#161#223#129
+  +#213#167#130#0'l'#219'FJY)'#219#222#128'2'#185'1'#166#210#128'F'#136#213'&'
+  +#185#148#146'4M'#191#0#202'&'#132#168#133#180'zhq'#28#247#190#131'F'#128#16
+  +#130#205#230#138#151#231#152#217'\'#214#246#171#213#3#240#250#139#171#232#199
+  +#0#179#185#172#244'g'#223'A'#169#253#251#20#173#139#19'3'#211#243#0#142#147
+  +#160'u'#193'bqQ'#235#209#186#192'q'#146'~'#128'k'#255#141#187#167'{'#180'n'
+  +#246'5'#2#142#127#162#174'Zo'#249#167#250#4#166'cp'#8#1#185#235'S'#0#0#0#0'I'
+  +'END'#174'B`'#130
+]);

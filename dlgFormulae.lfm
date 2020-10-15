@@ -1,0 +1,138 @@
+inherited frmFormulae: TfrmFormulae
+  Left = 402
+  Height = 187
+  Top = 329
+  Width = 325
+  BorderStyle = bsToolWindow
+  ClientHeight = 187
+  ClientWidth = 325
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  OnHide = FormHide
+  OnShow = FormShow
+  object lRed: TLabel[0]
+    Left = 9
+    Height = 13
+    Top = 12
+    Width = 19
+    Caption = 'r :='
+    ParentColor = False
+  end
+  object lGreen: TLabel[1]
+    Left = 9
+    Height = 13
+    Top = 44
+    Width = 21
+    Caption = 'g :='
+    ParentColor = False
+  end
+  object lBlue: TLabel[2]
+    Left = 9
+    Height = 13
+    Top = 76
+    Width = 21
+    Caption = 'b :='
+    ParentColor = False
+  end
+  object eRed: TEdit[3]
+    Left = 40
+    Height = 21
+    Top = 8
+    Width = 192
+    OnChange = eChange
+    TabOrder = 0
+  end
+  object eGreen: TEdit[4]
+    Left = 40
+    Height = 21
+    Top = 40
+    Width = 192
+    OnChange = eChange
+    TabOrder = 1
+  end
+  object eBlue: TEdit[5]
+    Left = 40
+    Height = 21
+    Top = 72
+    Width = 192
+    OnChange = eChange
+    TabOrder = 2
+  end
+  object cbPreview: TCheckBox[6]
+    Left = 8
+    Height = 19
+    Top = 157
+    Width = 20
+    OnClick = cbPreviewClick
+    TabOrder = 5
+  end
+  object bOK: TButton[7]
+    Left = 240
+    Height = 25
+    Top = 40
+    Width = 75
+    Default = True
+    ModalResult = 1
+    TabOrder = 6
+  end
+  object bCancel: TButton[8]
+    Left = 240
+    Height = 25
+    Top = 72
+    Width = 75
+    ModalResult = 2
+    TabOrder = 7
+  end
+  object bReset: TButton[9]
+    Left = 240
+    Height = 25
+    Top = 8
+    Width = 75
+    OnClick = bResetClick
+    TabOrder = 8
+  end
+  object cbRange: TComboBox[10]
+    Left = 9
+    Height = 21
+    Top = 128
+    Width = 167
+    ItemHeight = 13
+    ItemIndex = 0
+    Items.Strings = (
+      'RGBA: 0..1 (center=0.5)'
+      'RGBA: -1..1 (center=0)'
+      'RGBA: 0..255 (center=128)'
+      'RGBA: 0..100 (center=50)'
+    )
+    OnChange = eChange
+    Style = csDropDownList
+    TabOrder = 4
+    Text = 'RGBA: 0..1 (center=0.5)'
+  end
+  object lAlpha: TLabel[11]
+    Left = 9
+    Height = 13
+    Top = 104
+    Width = 21
+    Caption = 'a :='
+    ParentColor = False
+  end
+  object eAlpha: TEdit[12]
+    Left = 40
+    Height = 21
+    Top = 100
+    Width = 192
+    OnChange = eChange
+    TabOrder = 3
+  end
+  object bHelp: TButton[13]
+    Left = 240
+    Height = 25
+    Top = 104
+    Width = 75
+    OnClick = bHelpClick
+    TabOrder = 9
+  end
+end

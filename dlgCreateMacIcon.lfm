@@ -1,0 +1,75 @@
+object frmCreateMacIcon: TfrmCreateMacIcon
+  Left = 530
+  Height = 457
+  Top = 198
+  Width = 313
+  BorderStyle = bsToolWindow
+  ClientHeight = 457
+  ClientWidth = 313
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.1'
+  object bOK: TButton
+    Left = 153
+    Height = 25
+    Top = 424
+    Width = 72
+    Default = True
+    OnClick = bOKClick
+    TabOrder = 0
+  end
+  object bCancel: TButton
+    Left = 233
+    Height = 25
+    Top = 424
+    Width = 72
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 1
+  end
+  object bAll: TButton
+    Tag = 1
+    Left = 168
+    Height = 25
+    Top = 392
+    Width = 64
+    OnClick = bAllNoneClick
+    TabOrder = 2
+  end
+  object bNone: TButton
+    Left = 240
+    Height = 25
+    Top = 392
+    Width = 64
+    OnClick = bAllNoneClick
+    TabOrder = 3
+  end
+  object cgFormats: TCheckGroup
+    Left = 9
+    Height = 376
+    Top = 8
+    Width = 295
+    AutoFill = True
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    TabOrder = 4
+  end
+  object bReset: TButton
+    Left = 96
+    Height = 25
+    Top = 392
+    Width = 65
+    OnClick = bResetClick
+    TabOrder = 5
+  end
+end

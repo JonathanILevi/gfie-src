@@ -1,0 +1,31 @@
+(*
+	Greenfish Controls - ImageAnchors
+	Copyright © 2013 Balázs Szalkai
+	This file is released under the zlib license:
+
+	This software is provided 'as-is', without any express or implied
+	warranty. In no event will the authors be held liable for any damages
+	arising from the use of this software.
+
+	Permission is granted to anyone to use this software for any purpose,
+	including commercial applications, and to alter it and redistribute it
+	freely, subject to the following restrictions:
+
+	   1. The origin of this software must not be misrepresented; you must not
+	   claim that you wrote the original software. If you use this software
+	   in a product, an acknowledgment in the product documentation would be
+	   appreciated but is not required.
+
+	   2. Altered source versions must be plainly marked as such, and must not be
+	   misrepresented as being the original software.
+
+	   3. This notice may not be removed or altered from any source
+	   distribution.
+*)
+LazarusResources.Add('TImageAnchors','PNG',[
+  #137'PNG'#13#10#26#10#0#0#0#13'IHDR'#0#0#0#24#0#0#0#24#8#6#0#0#0#224'w='#248#0
+  +#0#0'TIDATH'#199#237#147'1'#10#0' '#12#3#19#241#255'_'#174#139#131#130'HQ'
+  +#227#148'L'#29'RB'#27#142#0#2'kq'#152#143'='#21'IE'#204#251'$S'#158#2#177'v'
+  +#23'D'#230#176#155#128''''#29'P]'#178#228'-'#163'G^'#178'<'#128'_@;'#133#200
+  +#160#25'4'#131'f'#208#12'ZW'#3'H"<''_8'#25';'#0#0#0#0'IEND'#174'B`'#130
+]);

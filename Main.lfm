@@ -1,0 +1,703 @@
+object frmMain: TfrmMain
+  Left = 299
+  Height = 560
+  Top = 133
+  Width = 935
+  AllowDropFiles = True
+  Caption = 'Greenfish Icon Editor Pro'
+  ClientHeight = 540
+  ClientWidth = 935
+  Color = 9474192
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  KeyPreview = True
+  Menu = mm
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDblClick = FormDblClick
+  OnDropFiles = FormDropFiles
+  OnKeyDown = FormKeyDown
+  OnKeyUp = FormKeyUp
+  OnMouseMove = FormMouseMove
+  OnShow = FormShow
+  LCLVersion = '1.1'
+  object pLeft: TPanel
+    Left = 0
+    Height = 516
+    Top = 0
+    Width = 80
+    Align = alLeft
+    BevelOuter = bvNone
+    ClientHeight = 516
+    ClientWidth = 80
+    Color = clForm
+    ParentColor = False
+    TabOrder = 0
+    inline frmToolbar: TToolbarFrame
+      Height = 388
+      Width = 80
+      Align = alTop
+    end
+    object Bevel1: TBevel
+      Left = 0
+      Height = 8
+      Top = 388
+      Width = 80
+      Align = alTop
+      Shape = bsSpacer
+    end
+    object Bevel2: TBevel
+      Left = 0
+      Height = 8
+      Top = 396
+      Width = 80
+      Align = alTop
+      Shape = bsTopLine
+    end
+  end
+  object pRight: TPanel
+    Left = 744
+    Height = 516
+    Top = 0
+    Width = 191
+    Align = alRight
+    BevelOuter = bvNone
+    ClientHeight = 516
+    ClientWidth = 191
+    Color = clForm
+    ParentColor = False
+    TabOrder = 1
+    inline frmLayers: TLayersFrame
+      Height = 113
+      Top = 21
+      Width = 191
+      Align = alClient
+      ClientHeight = 113
+      ClientWidth = 191
+      inherited pToolbar: TPanel
+        Width = 191
+        ClientWidth = 191
+      end
+      inherited lb: TgfListBox
+        Height = 88
+        Width = 191
+      end
+    end
+    inline frmColor: TColorFrame
+      Top = 155
+      Width = 191
+      Align = alBottom
+      ClientWidth = 191
+      TabOrder = 1
+      inherited pc: TPageControl
+        ActivePage = nil
+        TabIndex = -1
+      end
+      inherited pRGBA: TPanel
+        Width = 191
+        Align = alBottom
+        ClientWidth = 191
+        inherited lHTML: TLabel
+          Height = 13
+          Width = 30
+        end
+        inherited neRed: TNumberEdit
+          Height = 21
+        end
+        inherited neGreen: TNumberEdit
+          Height = 21
+        end
+        inherited neBlue: TNumberEdit
+          Height = 21
+        end
+        inherited neAlpha: TNumberEdit
+          Height = 21
+        end
+      end
+    end
+    object accLayers: TAccordion
+      Cursor = crHandPoint
+      Left = 0
+      Height = 21
+      Top = 0
+      Width = 191
+      Contents = frmLayers
+      Align = alTop
+    end
+    object accColorPicker: TAccordion
+      Cursor = crHandPoint
+      Left = 0
+      Height = 21
+      Top = 134
+      Width = 191
+      Contents = frmColor
+      Align = alBottom
+    end
+  end
+  object pbStatusBar: TDoubleBufPB
+    Left = 0
+    Height = 24
+    Top = 516
+    Width = 935
+    OnPaint = pbStatusBarPaint
+    Align = alBottom
+  end
+  object pc: TPageControl
+    Left = 80
+    Height = 516
+    Top = 0
+    Width = 664
+    Align = alClient
+    TabOrder = 3
+    OnChange = pcChange
+    OnMouseDown = pcMouseDown
+    OnMouseMove = pcMouseMove
+  end
+  object mm: TMainMenu
+    left = 24
+    top = 16
+    object miFile: TMenuItem
+      Tag = 123
+      OnClick = miFileClick
+      object miNewGraphic: TMenuItem
+        ShortCut = 16462
+        OnClick = miNewGraphicClick
+      end
+      object miNewLibrary: TMenuItem
+        OnClick = miNewLibraryClick
+      end
+      object N22: TMenuItem
+        Caption = '-'
+      end
+      object miOpen: TMenuItem
+        ShortCut = 16463
+        OnClick = miOpenClick
+      end
+      object miRecentFiles: TMenuItem
+        object N19: TMenuItem
+          Caption = '-'
+        end
+        object miClearList: TMenuItem
+          OnClick = miClearListClick
+        end
+      end
+      object miBatchConvert: TMenuItem
+        ShortCut = 16456
+        OnClick = miBatchConvertClick
+      end
+      object N10: TMenuItem
+        Caption = '-'
+      end
+      object miClose: TMenuItem
+        ShortCut = 16471
+        OnClick = miCloseClick
+      end
+      object miCloseAll: TMenuItem
+        OnClick = miCloseAllClick
+      end
+      object N5: TMenuItem
+        Caption = '-'
+      end
+      object miSave: TMenuItem
+        ShortCut = 16467
+        OnClick = miSaveClick
+      end
+      object miSaveAs: TMenuItem
+        ShortCut = 24659
+        OnClick = miSaveAsClick
+      end
+      object miSaveACopy: TMenuItem
+        OnClick = miSaveACopyClick
+      end
+      object miSaveAll: TMenuItem
+        OnClick = miSaveAllClick
+      end
+      object miExportAndroid: TMenuItem
+        ShortCut = 24641
+        OnClick = miExportAndroidClick
+      end
+      object miRevert: TMenuItem
+        ShortCut = 16507
+        OnClick = miRevertClick
+      end
+      object N9: TMenuItem
+        Caption = '-'
+      end
+      object miMetadata: TMenuItem
+        ShortCut = 32781
+        OnClick = miMetadataClick
+      end
+      object miPrint: TMenuItem
+        ShortCut = 16464
+        OnClick = miPrintClick
+      end
+      object N8: TMenuItem
+        Caption = '-'
+      end
+      object miExit: TMenuItem
+        OnClick = miExitClick
+      end
+    end
+    object miEdit: TMenuItem
+      Tag = 123
+      OnClick = miEditClick
+      object miUndo: TMenuItem
+        Tag = 1
+        ShortCut = 16474
+        OnClick = miUndoRedoClick
+      end
+      object miRedo: TMenuItem
+        ShortCut = 16473
+        OnClick = miUndoRedoClick
+      end
+      object N3: TMenuItem
+        Caption = '-'
+      end
+      object miCut: TMenuItem
+        ShortCut = 16472
+        OnClick = miCutClick
+      end
+      object miCopy: TMenuItem
+        ShortCut = 16451
+        OnClick = miCopyClick
+      end
+      object miPaste: TMenuItem
+        ShortCut = 16470
+        OnClick = miPasteClick
+      end
+      object miPasteAsPage: TMenuItem
+        ShortCut = 24662
+        OnClick = miPasteAsPageClick
+      end
+      object miPasteAsDoc: TMenuItem
+        ShortCut = 24644
+        OnClick = miPasteAsDocClick
+      end
+      object miDelete: TMenuItem
+        ShortCut = 16430
+        OnClick = miDeleteClick
+      end
+      object N4: TMenuItem
+        Caption = '-'
+      end
+      object miSelectAll: TMenuItem
+        ShortCut = 16449
+        OnClick = miSelectAllClick
+      end
+      object miDeselectAll: TMenuItem
+        ShortCut = 16452
+        OnClick = miDeselectAllClick
+      end
+      object miInvertSelection: TMenuItem
+        ShortCut = 16457
+        OnClick = miInvertSelectionClick
+      end
+      object N7: TMenuItem
+        Caption = '-'
+      end
+      object miLoadSelection: TMenuItem
+        OnClick = miLoadSelectionClick
+      end
+      object miSaveSelection: TMenuItem
+        OnClick = miSaveSelectionClick
+      end
+      object N18: TMenuItem
+        Caption = '-'
+      end
+      object miCropTransparency: TMenuItem
+        ShortCut = 24664
+        OnClick = miCropTransparencyClick
+      end
+      object miTransform: TMenuItem
+        object miXformSel: TMenuItem
+          ShortCut = 16468
+          OnClick = miXformSelClick
+        end
+        object N21: TMenuItem
+          Caption = '-'
+        end
+        object miFlipHoriz: TMenuItem
+          OnClick = miFlipRotateClick
+        end
+        object miFlipVert: TMenuItem
+          Tag = 1
+          OnClick = miFlipRotateClick
+        end
+        object miRotate90Left: TMenuItem
+          Tag = 2
+          OnClick = miFlipRotateClick
+        end
+        object miRotate90Right: TMenuItem
+          Tag = 3
+          OnClick = miFlipRotateClick
+        end
+        object miRotate180: TMenuItem
+          Tag = 4
+          OnClick = miFlipRotateClick
+        end
+      end
+    end
+    object miView: TMenuItem
+      Tag = 123
+      OnClick = miViewClick
+      object miZoomIn: TMenuItem
+        OnClick = miZoomInClick
+      end
+      object miZoomOut: TMenuItem
+        OnClick = miZoomOutClick
+      end
+      object mi100Percent: TMenuItem
+        ShortCut = 16454
+        OnClick = mi100PercentClick
+      end
+      object miFitWindow: TMenuItem
+        ShortCut = 24646
+        OnClick = miFitWindowClick
+      end
+      object N14: TMenuItem
+        Caption = '-'
+      end
+      object miGrid: TMenuItem
+        ShortCut = 16455
+        OnClick = miGridClick
+      end
+      object miCellGrid: TMenuItem
+        ShortCut = 24643
+        OnClick = miCellGridClick
+      end
+      object miCenterLines: TMenuItem
+        OnClick = miCenterLinesClick
+      end
+      object N25: TMenuItem
+        Caption = '-'
+      end
+      object miViewPages: TMenuItem
+        ShortCut = 116
+        OnClick = miViewPagesClick
+      end
+      object N15: TMenuItem
+        Caption = '-'
+      end
+      object miPanelLeft: TMenuItem
+        ShortCut = 16496
+        OnClick = miPanelLeftClick
+      end
+      object miPanelRight: TMenuItem
+        ShortCut = 16497
+        OnClick = miPanelRightClick
+      end
+      object miStartupScreen: TMenuItem
+        ShortCut = 16498
+        OnClick = miStartupScreenClick
+      end
+    end
+    object miFilters: TMenuItem
+      Tag = 123
+      OnClick = miFiltersClick
+      object miGrayscale: TMenuItem
+        OnClick = miGrayscaleClick
+      end
+      object miInvert: TMenuItem
+        OnClick = miInvertClick
+      end
+      object miSolarize: TMenuItem
+        OnClick = miSolarizeClick
+      end
+      object miRGBChannels: TMenuItem
+        ShortCut = 16466
+        OnClick = miRGBChannelsClick
+      end
+      object miHueSaturation: TMenuItem
+        ShortCut = 24648
+        OnClick = miHueSaturationClick
+      end
+      object miExposure: TMenuItem
+        ShortCut = 24645
+        OnClick = miExposureClick
+      end
+      object miFormulae: TMenuItem
+        OnClick = miFormulaeClick
+      end
+      object N11: TMenuItem
+        Caption = '-'
+      end
+      object miAverage: TMenuItem
+        OnClick = miAverageClick
+      end
+      object miSoftBlur: TMenuItem
+        ShortCut = 16450
+        OnClick = miSoftBlurClick
+      end
+      object miBlurMore: TMenuItem
+        ShortCut = 24642
+        OnClick = miBlurMoreClick
+      end
+      object miCustomBlur: TMenuItem
+        ShortCut = 24665
+        OnClick = miCustomBlurClick
+      end
+      object N20: TMenuItem
+        Caption = '-'
+      end
+      object miSharpen: TMenuItem
+        OnClick = miSharpenClick
+      end
+      object miUnsharpMask: TMenuItem
+        ShortCut = 24661
+        OnClick = miUnsharpMaskClick
+      end
+      object N12: TMenuItem
+        Caption = '-'
+      end
+      object miRemoveMatte: TMenuItem
+        ShortCut = 16461
+        OnClick = miRemoveMatteClick
+      end
+      object miOpacity: TMenuItem
+        ShortCut = 24655
+        OnClick = miOpacityClick
+      end
+      object N13: TMenuItem
+        Caption = '-'
+      end
+      object miPaintContour: TMenuItem
+        ShortCut = 24656
+        OnClick = miPaintContourClick
+      end
+      object miDropShadow: TMenuItem
+        ShortCut = 24663
+        OnClick = miDropShadowClick
+      end
+      object miGlow: TMenuItem
+        ShortCut = 24647
+        OnClick = miGlowClick
+      end
+      object miBevel: TMenuItem
+        ShortCut = 24652
+        OnClick = miBevelClick
+      end
+      object MenuItem1: TMenuItem
+        Caption = '-'
+      end
+      object miScript: TMenuItem
+        Caption = 'Scripting...'
+        OnClick = miScriptClick
+      end
+    end
+    object miLayers: TMenuItem
+      Tag = 123
+      OnClick = miLayersClick
+      object miLayerNew: TMenuItem
+        ShortCut = 16460
+        OnClick = miLayerNewClick
+      end
+      object miLayerDupl: TMenuItem
+        OnClick = miLayerDuplClick
+      end
+      object miLayerDelete: TMenuItem
+        OnClick = miLayerDeleteClick
+      end
+      object miLayerProp: TMenuItem
+        OnClick = miLayerPropClick
+      end
+      object N26: TMenuItem
+        Caption = '-'
+      end
+      object miMergeSelected: TMenuItem
+        Tag = 1
+        OnClick = miMergeLayersClick
+      end
+      object miMergeVisible: TMenuItem
+        Tag = 2
+        OnClick = miMergeLayersClick
+      end
+      object miFlattenImage: TMenuItem
+        OnClick = miMergeLayersClick
+      end
+      object N27: TMenuItem
+        Caption = '-'
+      end
+      object miLayerFromSel: TMenuItem
+        OnClick = miLayerFromSelClick
+      end
+    end
+    object miIcon: TMenuItem
+      Tag = 123
+      OnClick = miIconClick
+      object miPageNew: TMenuItem
+        ShortCut = 24654
+        OnClick = miPageNewClick
+      end
+      object miPageDelete: TMenuItem
+        OnClick = miPageDeleteClick
+      end
+      object miPageProp: TMenuItem
+        OnClick = miPagePropClick
+      end
+      object N28: TMenuItem
+        Caption = '-'
+      end
+      object miPageImport: TMenuItem
+        ShortCut = 24653
+        OnClick = miPageImportClick
+      end
+      object miPageExport: TMenuItem
+        OnClick = miPageExportClick
+      end
+      object miPageExportAll: TMenuItem
+        OnClick = miPageExportAllClick
+      end
+      object miUniformRate: TMenuItem
+        ShortCut = 24658
+        OnClick = miUniformRateClick
+      end
+      object N6: TMenuItem
+        Caption = '-'
+      end
+      object miCreateWinIcon: TMenuItem
+        ShortCut = 24649
+        OnClick = miCreateWinIconClick
+      end
+      object miCreateMacIcon: TMenuItem
+        OnClick = miCreateMacIconClick
+      end
+      object miCreateAndroidIcon: TMenuItem
+        OnClick = miCreateAndroidIconClick
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object miTest: TMenuItem
+        ShortCut = 24660
+        OnClick = miTestClick
+      end
+    end
+    object miLibrary: TMenuItem
+      Tag = 123
+      OnClick = miLibraryClick
+      object miResAdd: TMenuItem
+        OnClick = miResAddClick
+      end
+      object miResRemove: TMenuItem
+        OnClick = miResRemoveClick
+      end
+      object miResReplace: TMenuItem
+        OnClick = miResReplaceClick
+      end
+      object N24: TMenuItem
+        Caption = '-'
+      end
+      object miResProp: TMenuItem
+        OnClick = miResPropClick
+      end
+      object N23: TMenuItem
+        Caption = '-'
+      end
+      object miExtractEdit: TMenuItem
+        OnClick = miExtractEditClick
+      end
+      object miExtractSave: TMenuItem
+        OnClick = miExtractSaveClick
+      end
+    end
+    object miSettings: TMenuItem
+      object miPreferences: TMenuItem
+        ShortCut = 123
+        OnClick = miPreferencesClick
+      end
+      object miLanguage: TMenuItem
+        ShortCut = 122
+        OnClick = miLanguageClick
+      end
+    end
+    object miHelp: TMenuItem
+      Tag = 123
+      object N16: TMenuItem
+        Caption = '-'
+      end
+      object miHomepage: TMenuItem
+        OnClick = miHomepageClick
+      end
+      object N17: TMenuItem
+        Caption = '-'
+      end
+      object miAbout: TMenuItem
+        OnClick = miAboutClick
+      end
+    end
+  end
+  object od: TOpenDialog
+    FilterIndex = 2
+    Options = [ofAllowMultiSelect, ofPathMustExist, ofFileMustExist, ofEnableSizing]
+    OnFolderChange = DialogFolderChange
+    left = 192
+    top = 16
+  end
+  object sdGraphic: TSaveDialog
+    OnCanClose = sdGraphicCanClose
+    Options = [ofHideReadOnly, ofPathMustExist, ofEnableSizing]
+    OnFolderChange = DialogFolderChange
+    left = 256
+    top = 16
+  end
+  object sdLibrary: TSaveDialog
+    OnCanClose = sdLibraryCanClose
+    Options = [ofHideReadOnly, ofPathMustExist, ofEnableSizing]
+    OnFolderChange = DialogFolderChange
+    left = 312
+    top = 16
+  end
+  object ApplicationProperties1: TApplicationProperties
+    OnIdle = ApplicationProperties1Idle
+    left = 408
+    top = 22
+  end
+  object pmTab: TPopupMenu
+    OnPopup = pmTabPopup
+    left = 198
+    top = 97
+    object miTabName: TMenuItem
+      Caption = '(tab)'
+      Enabled = False
+    end
+    object MenuItem2: TMenuItem
+      Caption = '-'
+    end
+    object miTabClose: TMenuItem
+      Caption = 'Close'
+      OnClick = miTabCloseClick
+    end
+    object miTabCloseOthers: TMenuItem
+      Caption = 'Close all other tabs'
+      OnClick = miTabCloseOthersClick
+    end
+    object MenuItem4: TMenuItem
+      Caption = '-'
+    end
+    object miTabCopyFullPath: TMenuItem
+      Caption = 'Copy full path to clipboard'
+      OnClick = miTabCopyFullPathClick
+    end
+    object miTabCopyFilename: TMenuItem
+      Caption = 'Copy filename to clipboard'
+      OnClick = miTabCopyFilenameClick
+    end
+    object miTabCopyFolder: TMenuItem
+      Caption = 'Copy folder to clipboard'
+      OnClick = miTabCopyFolderClick
+    end
+    object MenuItem6: TMenuItem
+      Caption = '-'
+    end
+    object miTabOpenFolder: TMenuItem
+      Caption = 'Open containing folder'
+      OnClick = miTabOpenFolderClick
+    end
+    object miTabOpenFolderCmd: TMenuItem
+      Caption = 'Open containing folder in command line'
+      OnClick = miTabOpenFolderCmdClick
+    end
+  end
+end

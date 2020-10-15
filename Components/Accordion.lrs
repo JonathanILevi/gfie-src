@@ -1,0 +1,42 @@
+(*
+	Greenfish Controls - Accordion
+	Copyright © 2013 Balázs Szalkai
+	This file is released under the zlib license:
+
+	This software is provided 'as-is', without any express or implied
+	warranty. In no event will the authors be held liable for any damages
+	arising from the use of this software.
+
+	Permission is granted to anyone to use this software for any purpose,
+	including commercial applications, and to alter it and redistribute it
+	freely, subject to the following restrictions:
+
+	   1. The origin of this software must not be misrepresented; you must not
+	   claim that you wrote the original software. If you use this software
+	   in a product, an acknowledgment in the product documentation would be
+	   appreciated but is not required.
+
+	   2. Altered source versions must be plainly marked as such, and must not be
+	   misrepresented as being the original software.
+
+	   3. This notice may not be removed or altered from any source
+	   distribution.
+*)
+LazarusResources.Add('TAccordion','PNG',[
+  #137'PNG'#13#10#26#10#0#0#0#13'IHDR'#0#0#0#24#0#0#0#24#8#6#0#0#0#224'w='#248#0
+  +#0#1'MIDATH'#199#237#147#193'm'#194'0'#20#134#191'T='#3'#x'#128#28','#22#0#22
+  +#0'Fp'#164#168'G'#146'Q'#128#11#170'| b'#3'2'#129#195#157#3#136#1#128#9#162
+  +#12#208#215#19#174#2#8'*U'#156#154'O'#178','#127#182#242#242#252#203#208#208
+  +#240'W'#2#0#17#145#151'|<'#8#130#183'Ww'#240#171#2#231#243#153#253'~_s'#215
+  +#235#135#200#19#140'1'#210#239#247'k'#238'z}'#15#128'w'#128'4M'#9#195#208#23
+  +'<'#28#14'L'#167'S'#0#170#170#226'x<2'#24#12#200#243#156#225'p'#232#207#173
+  +'V+'#202#178#196#24'C'#171#213#186'q'#254#138#194'0$'#142'c'#22'_'#11#226'8'
+  +#174#21#203#178#140'('#138'0'#198#176'\.'#189'w'#206'Q'#150'%J)z'#189#30#0'Q'
+  +#20'y7'#26#141'~'#174#200'Z+'#221#207#174#31#214'Z'#223#166'RJ'#138#162#144
+  +#162'(Dk-'#167#211'IDD'#180#214#254'L'#154#166'~'#255#194'n'#183#147'Z'#200
+  +#219#143'mm'#6#216'l6('#165'p'#206#225#156'CkM'#150'e'#0't:'#157#155','#239
+  +'9'#0#146'$'#17'k'#173#31'I'#146#248'p/'#127'|'#29'. '#179#217'L'#214#235#181
+  +'w'#198#24#239#198#227#177'<}h'#243#249#156#201'dRsy'#158#163#181#198'9'#7'P'
+  +#11#185#170'*'#223#161'1'#134'v'#187#29#252#147#151#220#208#240#144'o9'#203
+  +'6u'#139'YI'#219#0#0#0#0'IEND'#174'B`'#130
+]);

@@ -1,0 +1,743 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InIDEConfig"/>
+      <MainUnit Value="0"/>
+      <Title Value="Greenfish Icon Editor Pro"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <AutoIncrementBuild Value="True"/>
+      <MajorVersionNr Value="3"/>
+      <MinorVersionNr Value="6"/>
+      <BuildNr Value="9"/>
+      <StringTable CompanyName="Balazs Szalkai" FileDescription="Greenfish Icon Editor Pro" InternalName="GFIE Pro" LegalCopyright="Balazs Szalkai" OriginalFilename="gfie.exe" ProductName="Greenfish Icon Editor Pro" ProductVersion="3.6"/>
+    </VersionInfo>
+    <BuildModes Count="2">
+      <Item1 Name="Release" Default="True"/>
+      <Item2 Name="Debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="gfie64"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <OtherUnitFiles Value="..\Components;Components;PSImports;pascalscript\Source"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <Style Value="1"/>
+            <SyntaxOptions>
+              <SyntaxMode Value="Delphi"/>
+              <IncludeAssertionCode Value="True"/>
+              <CStyleMacros Value="True"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="win64"/>
+            <Optimizations>
+              <VariablesInRegisters Value="True"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsStabs"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+          <Other>
+            <Verbosity>
+              <ShowHints Value="False"/>
+            </Verbosity>
+            <CompilerMessages>
+              <UseMsgFile Value="True"/>
+            </CompilerMessages>
+            <CustomOptions Value="-dGFIEDEBUG"/>
+            <CompilerPath Value="$(CompPath)"/>
+            <ExecuteBefore>
+              <Command Value="before_build.bat"/>
+            </ExecuteBefore>
+          </Other>
+        </CompilerOptions>
+      </Item2>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="5">
+      <Item1>
+        <PackageName Value="LazOpenGLContext"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="SynEdit"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="Printer4Lazarus"/>
+        <MinVersion Minor="5" Valid="True"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="gfComp"/>
+      </Item5>
+    </RequiredPackages>
+    <Units Count="87">
+      <Unit0>
+        <Filename Value="gfie.dpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="dlgToolSet.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ToolSetFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="dlgToolSet"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="dlgColor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ColorFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="dlgColor"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="ICNS.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ICNS"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="ICO.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ICO"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="ieShared.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DocumentFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ieShared"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="LangPack.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="LangPack"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="Layers.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Layers"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="Main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Main"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="PCX.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PCX"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="PNG.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PNG"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="ResList.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ResList"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="RIFF.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="RIFF"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="ShellEx.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ShellEx"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="StreamEx.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="StreamEx"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="UndoObject.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UndoObject"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="XPM.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="XPM"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="ANI.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ANI"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="BitmapEx.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BitmapEx"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="BoxBlurInternal.inc"/>
+        <IsPartOfProject Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="BlendModes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BlendModes"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="bmExUtils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="bmExUtils"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="BMP.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BMP"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="ColQuant.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ColQuant"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="ColSpaces.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ColSpaces"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="DdeServer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DdeServer"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="dlgBatchConvert.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmBatchConvert"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgBatchConvert"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="dlgBevel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmBevel"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgBevel"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="dlgBlur.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmBlur"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgBlur"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="dlgCellGrid.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCellGrid"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgCellGrid"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="dlgCreateIcon.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCreateIcon"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgCreateIcon"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="dlgDoc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="GraphicFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgDoc"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="dlgDocPage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmDocPage"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgDocPage"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="dlgExposure.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmExposure"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgExposure"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="dlgFormulae.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmFormulae"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgFormulae"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="dlgGlow.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmGlow"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgGlow"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="dlgHueSaturation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmHueSaturation"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgHueSaturation"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="dlgLanguage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmLanguage"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgLanguage"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="dlgLayerProp.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmLayerProp"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgLayerProp"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="dlgLayers.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="LayersFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="dlgLayers"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="dlgLib.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="LibraryFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgLib"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="dlgMatte.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmRemoveMatte"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgMatte"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="dlgMetadata.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmMetadata"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgMetadata"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="dlgOpacity.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmOpacity"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgOpacity"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="dlgPreferences.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmPreferences"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgPreferences"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="dlgPrint.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmPrint"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgPrint"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="dlgResProp.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmResProp"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgResProp"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="dlgRGBChannels.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmRGBChannels"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgRGBChannels"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="dlgShadow.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmShadow"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgShadow"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="dlgSplash.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSplash"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgSplash"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="dlgTest.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmTest"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgTest"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="dlgText.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmText"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgText"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="dlgToolbar.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ToolbarFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="dlgToolbar"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="dlgTransform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmTransform"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgTransform"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="dlgUnsharpMask.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmUnsharpMask"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgUnsharpMask"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="DocClass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DocClass"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="FileAssoc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FileAssoc"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="Filters.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Filters"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="ImageTransform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ImageTransform"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="FloatFormula.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FloatFormula"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="fnvHash.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="fnvHash"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="gfDataTree.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="gfDataTree"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="GFIEFormat.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GFIEFormat"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="gfMath.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="gfMath"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="GIF.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GIF"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="CIntf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CIntf"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="Locales.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Locales"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="dlgExeFormat.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmExeFormat"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgExeFormat"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="jpeg2000.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Jpeg2000"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="FilterDialog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FilterDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FilterDialog"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="dlgSaveOptions.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSaveOptions"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgSaveOptions"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="FastDiv.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FastDiv"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="dlgStartupFrame.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="StartupFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="dlgStartupFrame"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="dlgDebug.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmDebug"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgDebug"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="PixelFormats.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PixelFormats"/>
+      </Unit74>
+      <Unit75>
+        <Filename Value="Palette.inc"/>
+        <IsPartOfProject Value="True"/>
+      </Unit75>
+      <Unit76>
+        <Filename Value="dlgCreateMacIcon.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCreateMacIcon"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgCreateMacIcon"/>
+      </Unit76>
+      <Unit77>
+        <Filename Value="dlgCreateAndroidIcon.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCreateAndroidIcon"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgCreateAndroidIcon"/>
+      </Unit77>
+      <Unit78>
+        <Filename Value="dlgScript.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmScript"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgScript"/>
+      </Unit78>
+      <Unit79>
+        <Filename Value="psimportmath.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PSImportMath"/>
+      </Unit79>
+      <Unit80>
+        <Filename Value="uPSI_Generics.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uPSI_Generics"/>
+      </Unit80>
+      <Unit81>
+        <Filename Value="ImageConverter_Intf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ImageConverter_Intf"/>
+      </Unit81>
+      <Unit82>
+        <Filename Value="dlgSvgOpenOptions.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSvgOpenOptions"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="dlgSvgOpenOptions"/>
+      </Unit82>
+      <Unit83>
+        <Filename Value="utils3d.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Utils3d"/>
+      </Unit83>
+      <Unit84>
+        <Filename Value="NinePatch.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="NinePatch"/>
+      </Unit84>
+      <Unit85>
+        <Filename Value="Targa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Targa"/>
+      </Unit85>
+      <Unit86>
+        <Filename Value="PortableAnyMap.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PortableAnyMap"/>
+      </Unit86>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="gfie64"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="..\Components;Components;PSImports;pascalscript\Source"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Parsing>
+      <Style Value="1"/>
+      <SyntaxOptions>
+        <SyntaxMode Value="Delphi"/>
+        <IncludeAssertionCode Value="True"/>
+        <CStyleMacros Value="True"/>
+      </SyntaxOptions>
+    </Parsing>
+    <CodeGeneration>
+      <SmartLinkUnit Value="True"/>
+      <TargetCPU Value="x86_64"/>
+      <TargetOS Value="win64"/>
+      <Optimizations>
+        <VariablesInRegisters Value="True"/>
+        <OptimizationLevel Value="3"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsStabs"/>
+        <StripSymbols Value="True"/>
+        <UseExternalDbgSyms Value="True"/>
+      </Debugging>
+      <LinkSmart Value="True"/>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <Verbosity>
+        <ShowHints Value="False"/>
+      </Verbosity>
+      <CompilerMessages>
+        <UseMsgFile Value="True"/>
+      </CompilerMessages>
+      <CustomOptions Value="-OoSTACKFRAME -OoPEEPHOLE -OoCSE"/>
+      <CompilerPath Value="$(CompPath)"/>
+      <ExecuteBefore>
+        <Command Value="before_build.bat"/>
+      </ExecuteBefore>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="4">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="EReadError"/>
+      </Item4>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

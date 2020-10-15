@@ -1,0 +1,33 @@
+(*
+	Greenfish Controls - ColorSwatches
+	Copyright © 2013 Balázs Szalkai
+	This file is released under the zlib license:
+
+	This software is provided 'as-is', without any express or implied
+	warranty. In no event will the authors be held liable for any damages
+	arising from the use of this software.
+
+	Permission is granted to anyone to use this software for any purpose,
+	including commercial applications, and to alter it and redistribute it
+	freely, subject to the following restrictions:
+
+	   1. The origin of this software must not be misrepresented; you must not
+	   claim that you wrote the original software. If you use this software
+	   in a product, an acknowledgment in the product documentation would be
+	   appreciated but is not required.
+
+	   2. Altered source versions must be plainly marked as such, and must not be
+	   misrepresented as being the original software.
+
+	   3. This notice may not be removed or altered from any source
+	   distribution.
+*)
+LazarusResources.Add('TColorSwatches','PNG',[
+  #137'PNG'#13#10#26#10#0#0#0#13'IHDR'#0#0#0#24#0#0#0#24#8#6#0#0#0#224'w='#248#0
+  +#0#0'lIDATH'#199#237#145'1'#10#192'0'#8'E'#253#165#7#243'\'#153#156'r.o'#150
+  +'.'#29#26#251#233#150'b@'#23#241')'#10'>'#145#197#129';'#143'U'#187#207#239
+  +#25'{'#215#4#137#5#248#168#143#213'/'#218#255#192#127#146#169#187'@M'#140#250
+  +#236#189'O'#172#181'V'#146'3Jv'#247#169#171#170#228'.('#146#17' P'#146'3J'
+  +#166#238#2#133#128#250#28#1#162'$'#167#146#188#127'\'#30'K .w'#149'Lk'#0#0#0
+  +#0'IEND'#174'B`'#130
+]);

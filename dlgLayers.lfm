@@ -1,0 +1,97 @@
+object LayersFrame: TLayersFrame
+  Left = 0
+  Height = 188
+  Top = 0
+  Width = 200
+  ClientHeight = 188
+  ClientWidth = 200
+  LCLVersion = '1.1'
+  TabOrder = 0
+  DesignLeft = 277
+  DesignTop = 275
+  object pToolbar: TPanel
+    Left = 0
+    Height = 25
+    Top = 0
+    Width = 200
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 25
+    ClientWidth = 200
+    TabOrder = 0
+    OnMouseMove = FormMouseMove
+    object sbNew: TSpeedButton
+      Left = 0
+      Height = 24
+      Top = 0
+      Width = 24
+      Flat = True
+      OnClick = sbNewClick
+      OnMouseMove = ControlMouseMove
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object sbDelete: TSpeedButton
+      Left = 24
+      Height = 24
+      Top = 0
+      Width = 24
+      Flat = True
+      OnClick = sbDeleteClick
+      OnMouseMove = ControlMouseMove
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object sbProp: TSpeedButton
+      Left = 48
+      Height = 24
+      Top = 0
+      Width = 24
+      Flat = True
+      OnClick = sbPropClick
+      OnMouseMove = ControlMouseMove
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object sbMergeSelected: TSpeedButton
+      Left = 72
+      Height = 24
+      Top = 0
+      Width = 24
+      Flat = True
+      OnClick = sbMergeSelectedClick
+      OnMouseMove = ControlMouseMove
+      ShowHint = True
+      ParentShowHint = False
+    end
+  end
+  object lb: TgfListBox
+    Left = 0
+    Height = 163
+    Top = 25
+    Width = 200
+    CanDragItems = True
+    MultiSelect = True
+    ItemHeight = 48
+    OnGetCount = lbGetCount
+    OnItemGetSelected = lbItemGetSelected
+    OnItemMouseDown = lbItemMouseDown
+    OnItemPaint = lbItemPaint
+    OnItemSetSelected = lbItemSetSelected
+    OnItemDragDrop = lbItemDragDrop
+    OnListDblClick = lbListDblClick
+    OnListMouseMove = ControlMouseMove
+    Align = alClient
+    Color = clWhite
+    ParentColor = False
+    ParentShowHint = False
+    PopupMenu = pmLayers
+    ShowHint = True
+    OnKeyDown = lbKeyDown
+  end
+  object pmLayers: TPopupMenu
+    OnPopup = pmLayersPopup
+    left = 120
+    top = 16
+  end
+end

@@ -1,0 +1,104 @@
+inherited frmHueSaturation: TfrmHueSaturation
+  Left = 345
+  Height = 137
+  Top = 285
+  Width = 273
+  BorderStyle = bsToolWindow
+  ClientHeight = 137
+  ClientWidth = 273
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Position = poScreenCenter
+  object alHue: TAdjustLabel[0]
+    Left = 8
+    Height = 1
+    Top = 12
+    Width = 1
+    ParentColor = False
+    AttachedEdit = neHue
+  end
+  object alSat: TAdjustLabel[1]
+    Left = 8
+    Height = 1
+    Top = 60
+    Width = 1
+    ParentColor = False
+    AttachedEdit = neSat
+  end
+  object sbHue: TPaintScrollBar[2]
+    Left = 8
+    Height = 17
+    Top = 32
+    Width = 257
+    MinValue = -50
+    MaxValue = 50
+    Position = 0
+    OnChange = sbChange
+    OnPaint = sbHuePaint
+  end
+  object sbSat: TPaintScrollBar[3]
+    Left = 8
+    Height = 17
+    Top = 80
+    Width = 257
+    MinValue = -10
+    MaxValue = 10
+    Position = 0
+    OnChange = sbChange
+    OnPaint = sbSatPaint
+  end
+  object neHue: TNumberEdit[4]
+    Left = 120
+    Height = 21
+    Top = 8
+    Width = 49
+    OnChange = neChange
+    TabOrder = 2
+    Text = '0'
+    Min = -50
+    Max = 50
+    Increment = 1
+  end
+  object neSat: TNumberEdit[5]
+    Left = 120
+    Height = 21
+    Top = 56
+    Width = 49
+    OnChange = neChange
+    TabOrder = 3
+    Text = '0'
+    Min = -10
+    Max = 10
+    Increment = 1
+  end
+  object bOK: TButton[6]
+    Left = 112
+    Height = 25
+    Top = 104
+    Width = 75
+    Default = True
+    ModalResult = 1
+    TabOrder = 4
+  end
+  object bCancel: TButton[7]
+    Left = 192
+    Height = 25
+    Top = 104
+    Width = 75
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 5
+  end
+  object bReset: TButton[8]
+    Left = 8
+    Height = 25
+    Top = 104
+    Width = 75
+    OnClick = bResetClick
+    TabOrder = 6
+  end
+end

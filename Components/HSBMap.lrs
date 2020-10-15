@@ -1,0 +1,52 @@
+(*
+	Greenfish Controls - HSBMap
+	Copyright © 2013 Balázs Szalkai
+	This file is released under the zlib license:
+
+	This software is provided 'as-is', without any express or implied
+	warranty. In no event will the authors be held liable for any damages
+	arising from the use of this software.
+
+	Permission is granted to anyone to use this software for any purpose,
+	including commercial applications, and to alter it and redistribute it
+	freely, subject to the following restrictions:
+
+	   1. The origin of this software must not be misrepresented; you must not
+	   claim that you wrote the original software. If you use this software
+	   in a product, an acknowledgment in the product documentation would be
+	   appreciated but is not required.
+
+	   2. Altered source versions must be plainly marked as such, and must not be
+	   misrepresented as being the original software.
+
+	   3. This notice may not be removed or altered from any source
+	   distribution.
+*)
+LazarusResources.Add('THSBMap','PNG',[
+  #137'PNG'#13#10#26#10#0#0#0#13'IHDR'#0#0#0#24#0#0#0#24#8#6#0#0#0#224'w='#248#0
+  +#0#2':IDATH'#199#237#148#189'n'#20'1'#20'F'#207#189'wv'#6#10#132#132#16#13'E'
+  +#144#2'J'#129'(i'#232#168'h'#200'K'#228#21'hi'#145'x'#138'}'#137'HPPF'#162
+  +#161'@'#162'%'#8#4#18#20#208'B'#214#222#177'Ma{'#188#155#31#134#7#136'[Ks'
+  +#230'|'#223#189#134#203'3s'#4#224#217#253#157'4\'#251#9#247#224#207'm'#248
+  +#164'p'#12'|'#163''''#178#11#236#194#250#14'|'#238#224'#'#216#23#216'Y'#195
+  +']`'#151#192#192'W'#224#152#184#183#224#229#251#183#178'\.'#19#192#193#193
+  +#129't'#0']'#8'<'#127#8'<'#133'_'#143#224#181#193'!'#240#131#171'x'#30#0#251
+  +#240#251'1'#188#185#2#135#176#248#14'{k'#216#7#158#224#185#206#17'p'#200#139
+  +#248'!'#255#181#200'd'#208#1'DU'#156#12#16'`'#237' '#25#24#208#211'#('#16#192
+  +'y'#8#2#6'C'#15'6B'#4'<k'#28#1'P'#162'*'#0''''''''#219#128'Ql'#2'x'#7#177#0#6
+  +'z'#180#2#188#203'_T'#232#7#176'p'#26' '#19'`'#181'Z'#157'20'#197#233#0'c'
+  +#254#206#166'A'#6'D'#240'~'#2#12'=h8'#199#192#228'|'#131' '#134#23#203'?'#234
+  +#179'AW'#12#12#161']'#20#131#30',6'#128#159'3'#8#170'8YLI'#164#141#136'l+'
+  +#162#4'V"J'#21'0N'#6#225#162#14#130#150#14'FX{'#136#218'"'#178#26#145#243#25
+  +#160#176#232'A'#19#164#2#232#138'A'#176#11#0'Q'#183'KN'#218#12#194#166'A'#136
+  +#160#208#245#249#190#26#216#220#20#133':'#166#165#228#168#160#197' n'#149#220
+  +#0'*'#21#16#208'b'#144#146#204'DT'#247'`'#195' V'#131#181#131#24#192#192#6'0'
+  +'m'#0#169#29'x'#185'`LUq'#210#183'a'#145#214'A'#3#248#12'P'#176'-'#131#152
+  +#239#17#226#248#31'%{'#7'I'#234#152'.'#136'H'#142'ht'#16'l'#2'4'#131'H'#170
+  +#29#172't>'#162#10#200#17'u'#205' '#248#169#28#237#193#172#1'b5'#176#127'D'
+  +#228'k'#7'['#17#25#169#150#28#218#252'j'#15#26'O'#3#230#246#160'<'#21#163'k'
+  +#128#1'-'#128#0#177#141#151#12'y'#147#243#30'$'#194#252'&'#183#136'B'#137'('
+  +#143#169#228#183#129#8#177#168')HY'#180'X'#0':'#255#154'*'#175#142#222#229'o'
+  +'i'#158#137'P'#22')'#187#216#153#11#221#184#161'L'#210#141'[7'#207#0'.'#207
+  +#236#249#11'A6g'#142#166'E'#152#249#0#0#0#0'IEND'#174'B`'#130
+]);

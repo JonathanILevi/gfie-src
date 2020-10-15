@@ -1,0 +1,53 @@
+inherited frmOpacity: TfrmOpacity
+  Left = 449
+  Height = 73
+  Top = 353
+  Width = 169
+  BorderStyle = bsToolWindow
+  ClientHeight = 73
+  ClientWidth = 169
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  object alOpacity: TAdjustLabel[0]
+    Left = 8
+    Height = 1
+    Top = 12
+    Width = 1
+    ParentColor = False
+    AttachedEdit = neOpacity
+  end
+  object bOK: TButton[1]
+    Left = 8
+    Height = 25
+    Top = 40
+    Width = 75
+    Default = True
+    ModalResult = 1
+    TabOrder = 0
+  end
+  object bCancel: TButton[2]
+    Left = 88
+    Height = 25
+    Top = 40
+    Width = 75
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 1
+  end
+  object neOpacity: TNumberEdit[3]
+    Left = 88
+    Height = 21
+    Top = 8
+    Width = 73
+    OnChange = neOpacityChange
+    TabOrder = 2
+    Text = '100'
+    Min = 0
+    Max = 300
+    Increment = 1
+  end
+end

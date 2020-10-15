@@ -1,0 +1,20 @@
+*** The main program
+
+It may be the best to use a Lazarus daily snapshot with fpc version at least 2.7.1 for compilation. (see http://mirrors.iwi.me/lazarus/snapshots/) The latest, cutting-edge compiler may optimize code more and will enable the use of some advanced syntax GFIE uses.
+
+WARNING: these daily Lazarus snapshots may be dangerous to use, and no one other than you is liable for any possible damage to your computer, your data or anything valuable. (see disclaimer here: http://freepascal.dfmk.hu/test/lazarus/)
+
+To compile GFIE, first create a new Lazarus package gfComp which references all files under the Components folder. Then build and install this package (this may include recompiling Lazarus). Now you can load the gfie.lpi project file into Lazarus and it should compile.
+
+*** Other programs
+
+Some utilized programs are written in other languages and need to be compiled separately:
+* libgfiec is written in C++. Use Code::Blocks to compile this one. The c folder contains the necessary files to compile libgfie32c.dll (Release32 target) and libgfie64c.dll (Release64 target).
+* Image Converter is written in C#.
+
+*** Performance note
+
+Note that currently GFIE is optimized for the i386 (32-bit desktop) and x86_64 (64-bit desktop) architectures. It will probably compile under other architectures like PowerPC, too, but performance may be affected as the FastDiv library (which enables fast division with small numbers) will fall back to use the simple division instruction, which will be probably very slow, partly due to the added function call. You should either
+	* make a FastDiv variant on these architectures (see the libdivide library),
+or
+	* eliminate FastDiv completely and rewrite those pieces of code which use FastDiv to simple division.

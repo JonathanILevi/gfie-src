@@ -1,0 +1,118 @@
+inherited frmUnsharpMask: TfrmUnsharpMask
+  Left = 301
+  Height = 153
+  Top = 301
+  Width = 225
+  BorderStyle = bsToolWindow
+  ClientHeight = 153
+  ClientWidth = 225
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  OnHide = FormHide
+  OnShow = FormShow
+  Position = poScreenCenter
+  object alAmount: TAdjustLabel[0]
+    Left = 8
+    Height = 1
+    Top = 12
+    Width = 1
+    ParentColor = False
+    AttachedEdit = neAmount
+  end
+  object alRadius: TAdjustLabel[1]
+    Left = 8
+    Height = 1
+    Top = 44
+    Width = 1
+    ParentColor = False
+    AttachedEdit = neRadius
+  end
+  object alThreshold: TAdjustLabel[2]
+    Left = 8
+    Height = 1
+    Top = 76
+    Width = 1
+    ParentColor = False
+    AttachedEdit = neThreshold
+  end
+  object neAmount: TNumberEdit[3]
+    Left = 72
+    Height = 21
+    Top = 8
+    Width = 57
+    OnChange = ObjectChange
+    TabOrder = 0
+    Text = '100'
+    Min = 10
+    Max = 500
+    Increment = 1
+  end
+  object neRadius: TNumberEdit[4]
+    Left = 72
+    Height = 21
+    Top = 40
+    Width = 57
+    OnChange = ObjectChange
+    TabOrder = 1
+    Text = '0'
+    Min = 0
+    Max = 100
+    Increment = 0.25
+  end
+  object neThreshold: TNumberEdit[5]
+    Left = 72
+    Height = 21
+    Top = 72
+    Width = 57
+    OnChange = ObjectChange
+    TabOrder = 2
+    Text = '0'
+    Min = 0
+    Max = 255
+    Increment = 1
+  end
+  object bOK: TButton[6]
+    Left = 144
+    Height = 25
+    Top = 8
+    Width = 75
+    Default = True
+    ModalResult = 1
+    TabOrder = 3
+  end
+  object bCancel: TButton[7]
+    Left = 144
+    Height = 25
+    Top = 40
+    Width = 75
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 4
+  end
+  object bReset: TButton[8]
+    Left = 144
+    Height = 25
+    Top = 72
+    Width = 75
+    OnClick = bResetClick
+    TabOrder = 5
+  end
+  object cbPreview: TCheckBox[9]
+    Left = 8
+    Height = 19
+    Top = 128
+    Width = 20
+    OnClick = cbPreviewClick
+    TabOrder = 6
+  end
+  object cbToric: TCheckBox[10]
+    Left = 8
+    Height = 19
+    Top = 104
+    Width = 20
+    OnClick = ObjectChange
+    TabOrder = 7
+  end
+end

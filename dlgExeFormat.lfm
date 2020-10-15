@@ -1,0 +1,47 @@
+object frmExeFormat: TfrmExeFormat
+  Left = 525
+  Height = 89
+  Top = 312
+  Width = 214
+  BorderStyle = bsToolWindow
+  ClientHeight = 89
+  ClientWidth = 214
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.1'
+  object bOK: TButton
+    Left = 112
+    Height = 25
+    Top = 32
+    Width = 96
+    Default = True
+    ModalResult = 1
+    TabOrder = 0
+  end
+  object rg: TRadioGroup
+    Left = 8
+    Height = 73
+    Top = 8
+    Width = 99
+    AutoFill = True
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 55
+    ClientWidth = 95
+    ItemIndex = 0
+    Items.Strings = (
+      '32-bit (PE)'
+      '16-bit (NE)'
+    )
+    TabOrder = 1
+  end
+end

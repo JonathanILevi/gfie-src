@@ -1,0 +1,21 @@
+object frmDebug: TfrmDebug
+  Left = 250
+  Height = 354
+  Top = 281
+  Width = 466
+  Caption = 'Debug'
+  ClientHeight = 354
+  ClientWidth = 466
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  LCLVersion = '0.9.31'
+  object m: TMemo
+    Left = 0
+    Height = 354
+    Top = 0
+    Width = 466
+    Align = alClient
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+end

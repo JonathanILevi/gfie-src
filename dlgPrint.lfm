@@ -1,0 +1,113 @@
+object frmPrint: TfrmPrint
+  Left = 302
+  Height = 177
+  Top = 183
+  Width = 306
+  BorderStyle = bsToolWindow
+  ClientHeight = 177
+  ClientWidth = 306
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.1'
+  object alCopies: TAdjustLabel
+    Left = 8
+    Height = 1
+    Top = 44
+    Width = 1
+    ParentColor = False
+    AttachedEdit = neCopies
+  end
+  object alZoom: TAdjustLabel
+    Left = 144
+    Height = 1
+    Top = 44
+    Width = 1
+    ParentColor = False
+    AttachedEdit = neZoom
+  end
+  object lCaption: TLabel
+    Left = 8
+    Height = 1
+    Top = 76
+    Width = 1
+    ParentColor = False
+  end
+  object bPrinterSetup: TButton
+    Left = 8
+    Height = 25
+    Top = 8
+    Width = 160
+    OnClick = bPrinterSetupClick
+    TabOrder = 0
+  end
+  object neCopies: TNumberEdit
+    Left = 80
+    Height = 21
+    Top = 40
+    Width = 57
+    TabOrder = 1
+    Text = '1'
+    Min = 1
+    Max = 100
+    Increment = 1
+  end
+  object rgPages: TRadioGroup
+    Left = 8
+    Height = 65
+    Top = 104
+    Width = 160
+    AutoFill = True
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    TabOrder = 2
+  end
+  object neZoom: TNumberEdit
+    Left = 240
+    Height = 21
+    Top = 40
+    Width = 57
+    TabOrder = 3
+    Text = '100'
+    Min = 10
+    Max = 1000
+    Increment = 1
+  end
+  object eCaption: TEdit
+    Left = 80
+    Height = 21
+    Top = 72
+    Width = 217
+    TabOrder = 4
+  end
+  object bOk: TButton
+    Left = 216
+    Height = 25
+    Top = 112
+    Width = 75
+    Default = True
+    ModalResult = 1
+    TabOrder = 5
+  end
+  object bCancel: TButton
+    Left = 216
+    Height = 25
+    Top = 144
+    Width = 75
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 6
+  end
+  object psd: TPrinterSetupDialog
+    left = 200
+    top = 8
+  end
+end

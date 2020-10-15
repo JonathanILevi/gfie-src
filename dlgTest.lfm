@@ -1,0 +1,237 @@
+object frmTest: TfrmTest
+  Left = 346
+  Height = 500
+  Top = 192
+  Width = 786
+  ClientHeight = 500
+  ClientWidth = 786
+  Constraints.MinHeight = 150
+  Constraints.MinWidth = 200
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  KeyPreview = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnHide = FormHide
+  OnKeyDown = FormKeyDown
+  OnResize = FormResize
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.1'
+  object pc: TPageControl
+    Left = 0
+    Height = 500
+    Top = 0
+    Width = 786
+    ActivePage = tsTexture
+    Align = alClient
+    TabIndex = 1
+    TabOrder = 0
+    object tsGeneral: TTabSheet
+      Caption = 'tsGeneral'
+      ClientHeight = 474
+      ClientWidth = 778
+      object pTop: TPanel
+        Left = 0
+        Height = 50
+        Top = 0
+        Width = 778
+        Align = alTop
+        BevelOuter = bvNone
+        ClientHeight = 50
+        ClientWidth = 778
+        Color = clForm
+        ParentColor = False
+        TabOrder = 0
+        object sbClear: TSpeedButton
+          Left = 12
+          Height = 24
+          Top = 9
+          Width = 24
+          Flat = True
+          OnClick = sbClearClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object sbBgrLoad: TSpeedButton
+          Left = 44
+          Height = 24
+          Top = 9
+          Width = 24
+          Flat = True
+          OnClick = sbBgrLoadClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object sbBgrDefault: TSpeedButton
+          Left = 68
+          Height = 24
+          Top = 9
+          Width = 24
+          Flat = True
+          OnClick = sbBgrDefaultClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+      end
+      object pb: TDoubleBufPB
+        Left = 0
+        Height = 424
+        Top = 50
+        Width = 778
+        OnMouseDown = pbMouseDown
+        OnMouseMove = pbMouseMove
+        OnMouseUp = pbMouseUp
+        DrawToBitmap = True
+        OnPaint = pbPaint
+        Align = alClient
+      end
+    end
+    object tsTexture: TTabSheet
+      Caption = 'tsTexture'
+      ClientHeight = 474
+      ClientWidth = 778
+      object pOpenGLControls: TPanel
+        Left = 0
+        Height = 50
+        Top = 0
+        Width = 778
+        Align = alTop
+        BevelOuter = bvNone
+        ClientHeight = 50
+        ClientWidth = 778
+        Color = clForm
+        ParentColor = False
+        TabOrder = 0
+        object sbObjLoad: TSpeedButton
+          Left = 12
+          Height = 24
+          Top = 10
+          Width = 24
+          Flat = True
+          OnClick = sbObjLoadClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object sbLighting: TSpeedButton
+          Left = 40
+          Height = 24
+          Top = 10
+          Width = 24
+          AllowAllUp = True
+          Down = True
+          Flat = True
+          GroupIndex = 1
+          OnClick = sbLightingClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+        object cbTextureMultiplier: TComboBox
+          Left = 79
+          Height = 21
+          Top = 10
+          Width = 61
+          ItemHeight = 13
+          ItemIndex = 1
+          Items.Strings = (
+            '0x'
+            '1x'
+            '2x'
+            '4x'
+            '8x'
+            '16x'
+            '32x'
+            '64x'
+          )
+          OnChange = cbTextureMultiplierChange
+          ParentShowHint = False
+          ShowHint = True
+          Style = csDropDownList
+          TabOrder = 0
+          Text = '1x'
+        end
+      end
+    end
+    object ts9Patch: TTabSheet
+      Caption = 'ts9Patch'
+      ClientHeight = 474
+      ClientWidth = 778
+      object iNinePatch: TImage
+        Left = 0
+        Height = 424
+        Top = 50
+        Width = 778
+        Align = alClient
+      end
+      object lNotNinePatch: TLabel
+        Left = 0
+        Height = 424
+        Top = 50
+        Width = 778
+        Align = alClient
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'This picture cannot be interpreted as a 9-patch image.'
+        Font.Color = clWindowText
+        Font.Height = -27
+        Font.Name = 'Tahoma'
+        Layout = tlCenter
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object pOpenGLControls1: TPanel
+        Left = 0
+        Height = 50
+        Top = 0
+        Width = 778
+        Align = alTop
+        BevelOuter = bvNone
+        ClientHeight = 50
+        ClientWidth = 778
+        Color = clForm
+        ParentColor = False
+        TabOrder = 0
+        object sbRedrawNinePatch: TSpeedButton
+          Left = 12
+          Height = 24
+          Top = 10
+          Width = 24
+          Flat = True
+          OnClick = sbRedrawNinePatchClick
+          ShowHint = True
+          ParentShowHint = False
+        end
+      end
+    end
+  end
+  object tmCursor: TTimer
+    Enabled = False
+    Interval = 40
+    OnTimer = tmCursorTimer
+    left = 32
+    top = 128
+  end
+  object tmAni: TTimer
+    Enabled = False
+    Interval = 20
+    OnTimer = tmAniTimer
+    left = 80
+    top = 128
+  end
+  object od3dObject: TOpenDialog
+    Title = 'Open 3d object'
+    Filter = '*.obj'
+    Options = [ofPathMustExist, ofFileMustExist, ofEnableSizing]
+    left = 264
+    top = 136
+  end
+  object tmGLMessageUpdate: TTimer
+    Interval = 1500
+    OnTimer = tmGLMessageUpdateTimer
+    left = 160
+    top = 128
+  end
+end

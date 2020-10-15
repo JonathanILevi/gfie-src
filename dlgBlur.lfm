@@ -1,0 +1,108 @@
+inherited frmBlur: TfrmBlur
+  Left = 533
+  Height = 168
+  Top = 294
+  Width = 234
+  BorderStyle = bsToolWindow
+  ClientHeight = 168
+  ClientWidth = 234
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  OnHide = FormHide
+  OnShow = FormShow
+  Position = poScreenCenter
+  object alGaussianRadius: TAdjustLabel[0]
+    Left = 16
+    Height = 1
+    Top = 36
+    Width = 1
+    ParentColor = False
+    AttachedEdit = neGaussianRadius
+  end
+  object alBoxRadius: TAdjustLabel[1]
+    Left = 16
+    Height = 1
+    Top = 92
+    Width = 1
+    ParentColor = False
+    AttachedEdit = neBoxRadius
+  end
+  object rbGaussian: TRadioButton[2]
+    Left = 8
+    Height = 19
+    Top = 8
+    Width = 20
+    Checked = True
+    OnClick = rbClick
+    TabOrder = 0
+    TabStop = True
+  end
+  object rbBox: TRadioButton[3]
+    Left = 8
+    Height = 19
+    Top = 64
+    Width = 20
+    OnClick = rbClick
+    TabOrder = 1
+  end
+  object neGaussianRadius: TNumberEdit[4]
+    Left = 80
+    Height = 21
+    Top = 32
+    Width = 57
+    OnChange = neChange
+    TabOrder = 2
+    Text = '0'
+    Min = 0
+    Max = 100
+    Increment = 0.25
+  end
+  object bOK: TButton[5]
+    Left = 152
+    Height = 25
+    Top = 24
+    Width = 75
+    Default = True
+    ModalResult = 1
+    TabOrder = 3
+  end
+  object bCancel: TButton[6]
+    Left = 152
+    Height = 25
+    Top = 64
+    Width = 75
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 4
+  end
+  object neBoxRadius: TNumberEdit[7]
+    Left = 80
+    Height = 21
+    Top = 88
+    Width = 57
+    OnChange = neChange
+    TabOrder = 5
+    Text = '1'
+    Min = 1
+    Max = 100
+    Increment = 1
+  end
+  object cbPreview: TCheckBox[8]
+    Left = 8
+    Height = 19
+    Top = 144
+    Width = 20
+    OnClick = cbPreviewClick
+    TabOrder = 6
+  end
+  object cbToric: TCheckBox[9]
+    Left = 8
+    Height = 19
+    Top = 120
+    Width = 20
+    OnClick = cbToricClick
+    TabOrder = 7
+  end
+end

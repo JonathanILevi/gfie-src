@@ -1,0 +1,145 @@
+object StartupFrame: TStartupFrame
+  Left = 0
+  Height = 571
+  Top = 0
+  Width = 586
+  Align = alClient
+  ClientHeight = 571
+  ClientWidth = 586
+  Color = clForm
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnMouseMove = FrameMouseMove
+  OnResize = FrameResize
+  ParentColor = False
+  ParentFont = False
+  TabOrder = 0
+  DesignLeft = 336
+  DesignTop = 114
+  object pAll: TPanel
+    Left = 0
+    Height = 571
+    Top = 0
+    Width = 586
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 571
+    ClientWidth = 586
+    Color = clForm
+    ParentColor = False
+    TabOrder = 0
+    object pTooltip: TPanel
+      Left = 112
+      Height = 152
+      Top = 360
+      Width = 352
+      BevelOuter = bvNone
+      BorderStyle = bsSingle
+      ClientHeight = 148
+      ClientWidth = 348
+      Color = 14811135
+      ParentColor = False
+      TabOrder = 0
+      Visible = False
+      object lInfoCaption: TLabel
+        Left = 0
+        Height = 30
+        Top = 0
+        Width = 348
+        Align = alTop
+        AutoSize = False
+        Font.Color = 4210752
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object lInfo: TLabel
+        Left = 0
+        Height = 118
+        Top = 30
+        Width = 348
+        Align = alClient
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = False
+        Font.Color = 6316128
+        Font.Height = -12
+        Font.Name = 'Tahoma'
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+    end
+    object lTitle: TLabel
+      Left = 8
+      Height = 1
+      Top = 8
+      Width = 1
+      Font.Height = -27
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+    end
+    object cbShow: TCheckBox
+      Left = 8
+      Height = 19
+      Top = 542
+      Width = 20
+      Anchors = [akLeft, akBottom]
+      Checked = True
+      OnChange = cbShowChange
+      State = cbChecked
+      TabOrder = 1
+    end
+    object imHelp: TImage
+      Cursor = crHandPoint
+      Left = 552
+      Height = 24
+      Top = 8
+      Width = 24
+      Anchors = [akTop, akRight]
+      Center = True
+      OnClick = imHelpClick
+      ParentShowHint = False
+      Picture.Data = {
+        07544269746D617066010000424D660100000000000076000000280000001400
+        0000140000000100040000000000F00000000000000000000000100000000000
+        00007F7F7F00868686008B8B8B008D8D8D00999999009D9D9D00A2A2A200ACAC
+        AC00B5B5B500BCBCBC00C3C3C300C7C7C700CDCDCD00D5D5D500DCDCDC00FFFF
+        FF00FFFFFFFFFFFFFFFFFFFF0000FFFFFFFFFFFFFFFFFFFF0000FFFFFFF02332
+        0FFFFFFF0000FFFFFFF2ACCA2FFFFFFF0000FFFFFFF3CEEC3FFFFFFF0000FFFF
+        FFF2ACCA2FFFFFFF0000FFFFFFF045640FFFFFFF0000FFFFFFFFFFFFFFFFFFFF
+        0000FFFFFFFF04540FFFFFFF0000FFFFFFFF1ACB5FFFFFFF0000FFFFFFFF09DD
+        A2FFFFFF0000FFFFFFFFF29DD91FFFFF0000FFFFFFFFFF3ADD91FFFF0000FFFF
+        02320FF7DED90FFF0000FFFF2ACB6FF7DEEB2FFF0000FFFF3CEDB77CDED90FFF
+        0000FFFF08CDDDDDED91FFFF0000FFFFF059CCCCC91FFFFF0000FFFFFFF03444
+        30FFFFFF0000FFFFFFFFFFFFFFFFFFFF0000
+      }
+      ShowHint = True
+      Transparent = True
+    end
+    object lSubtitle: TLabel
+      Left = 8
+      Height = 1
+      Top = 48
+      Width = 1
+      ParentColor = False
+    end
+    object bRecentFiles: TButton
+      Left = 8
+      Height = 41
+      Top = 176
+      Width = 168
+      OnClick = bRecentFilesClick
+      OnMouseMove = bRecentFilesMouseMove
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+    end
+  end
+  object pm: TPopupMenu
+    left = 24
+    top = 264
+  end
+end

@@ -1,0 +1,50 @@
+(*
+	Greenfish Controls - gfListBox
+	Copyright © 2013 Balázs Szalkai
+	This file is released under the zlib license:
+
+	This software is provided 'as-is', without any express or implied
+	warranty. In no event will the authors be held liable for any damages
+	arising from the use of this software.
+
+	Permission is granted to anyone to use this software for any purpose,
+	including commercial applications, and to alter it and redistribute it
+	freely, subject to the following restrictions:
+
+	   1. The origin of this software must not be misrepresented; you must not
+	   claim that you wrote the original software. If you use this software
+	   in a product, an acknowledgment in the product documentation would be
+	   appreciated but is not required.
+
+	   2. Altered source versions must be plainly marked as such, and must not be
+	   misrepresented as being the original software.
+
+	   3. This notice may not be removed or altered from any source
+	   distribution.
+*)
+LazarusResources.Add('TgfListBox','PNG',[
+  #137'PNG'#13#10#26#10#0#0#0#13'IHDR'#0#0#0#24#0#0#0#24#8#6#0#0#0#224'w='#248#0
+  +#0#2#8'IDATH'#199#213#149#205'j'#26'Q'#24#134#159#134'H'#230#24'j'#166'b7'
+  +#133'V'#11#165'2'#1#9#180#165'!'#162'Bn@'#188#5'o'#194#139#200#213'H'#246#221
+  +'f'#209'EQZ'#153#169#208'0'#179#168#210#140#233#184'9#n'#252#186'0N3'#26#127
+  +'i'#23#249'`'#224'p~'#190#231'|'#239';'#231#28'x'#236#241'd'#214'('#22#139
+  +#242#175#146'^]]Ey'#247#239#15'\^^'#238#148#176'Z'#173#210'h4'#0#184#184#184
+  +#136#141#237#207'O'#182#251#135#8#130#136#128#128' '#252#246#127'a$'#15#17#17
+  +#12'#'#25#27#255#248'vo%|'#1' '#8#159#207'_'#1#240#225#147#139'{'#237#240#253
+  +#219#23#4#225'i'#202'$'#127#252#14'A0'#14#14'9Pj'#10'z`'#231#203#1#242#215
+  +#138'Q'#168#241#251'?y'#241#242'5"'#194'('#212#252#232'~E'#4#158#165#159#147
+  +'{s'#28#205#175#213'j'#0'4'#155#205#213#0'd'#186#243#153#4#239#207#206'cr-'
+  +#180#215#196#2#224#204'J "[}['#1'noo'#163#133#190#239#163#148'"'#153'LF}Zk'
+  +#212#157#246'"'#130'i'#154'['#154'|'#183#176#219#237#210'n'#183'1M'#147#147
+  +#147#19'D'#132' '#8'p]'#151#211#211#211#24'dk'#128#214#154'^'#175'G.'#151'Ck'
+  +'M'#167#211#137#18'%'#18#9'<'#207'#'#159#207#199#0#243#230#174#4'('#165#168
+  +'T*'#177#138#214'i'#223'h4'#176','#139'z'#189#190#26#144'N'#167'w2'#217#178
+  +',l'#219#222#204#228#251#213#220#220#220#160#148#138'i'#30#134'!J)'#0'R'#169
+  +#212#244#6#176'm,'#203'Z'#15#152#133#239#251#4'A@'#171#213#226#232#232#136'B'
+  +#161#128#136'0'#28#14#233#247#251#148'J'#165#221'*'#0'"c'#1#178#217',Zk'#28
+  +#199#137#18'f2'#153#5#137'6'#174'`fr'#185'\^i'#236#188#201#27'W`'#154#230'N&'
+  +#207#255'=K'#1'A'#16'0'#153'Lb''vf'#234'`0'#136'N'#181'a'#24#136'Hd'#242#178
+  +#247'`'#239'!'#137#194'0d<'#30#3#16#134'!'#158#231'1'#26#141#176'm'#27#199'q'
+  +'p]w'#227#187#232#191'?'#153#143'?'#254#0#189#148#233'2a'#196#174#131#0#0#0#0
+  +'IEND'#174'B`'#130
+]);

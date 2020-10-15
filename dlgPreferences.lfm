@@ -1,0 +1,476 @@
+object frmPreferences: TfrmPreferences
+  Left = 279
+  Height = 337
+  Top = 327
+  Width = 425
+  BorderStyle = bsToolWindow
+  ClientHeight = 337
+  ClientWidth = 425
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.1'
+  object bOK: TButton
+    Left = 256
+    Height = 25
+    Top = 304
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Default = True
+    ModalResult = 1
+    TabOrder = 2
+  end
+  object bCancel: TButton
+    Left = 344
+    Height = 25
+    Top = 304
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 3
+  end
+  object bReset: TButton
+    Left = 8
+    Height = 25
+    Top = 304
+    Width = 75
+    Anchors = [akLeft, akBottom]
+    OnClick = bResetClick
+    TabOrder = 1
+  end
+  object pc: TPageControl
+    Left = 8
+    Height = 289
+    Top = 8
+    Width = 409
+    ActivePage = tsMisc
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabIndex = 0
+    TabOrder = 0
+    object tsMisc: TTabSheet
+      ClientHeight = 263
+      ClientWidth = 401
+      ImageIndex = 2
+      object gbUsePNG: TGroupBox
+        Left = 8
+        Height = 57
+        Top = 72
+        Width = 388
+        Anchors = [akTop, akLeft, akRight]
+        ClientHeight = 39
+        ClientWidth = 384
+        TabOrder = 0
+        object cbUsePNG: TCheckBox
+          Left = 8
+          Height = 19
+          Top = 10
+          Width = 20
+          TabOrder = 0
+        end
+        object nePNGLimit: TNumberEdit
+          Left = 330
+          Height = 21
+          Top = 8
+          Width = 49
+          Anchors = [akTop, akRight]
+          OnChange = nePNGLimitChange
+          TabOrder = 1
+          Text = '256'
+          Min = 1
+          Max = 256
+          Increment = 1
+        end
+      end
+      object gbImageMax: TGroupBox
+        Left = 8
+        Height = 57
+        Top = 8
+        Width = 388
+        Anchors = [akTop, akLeft, akRight]
+        ClientHeight = 39
+        ClientWidth = 384
+        TabOrder = 1
+        object alMaxWidth: TAdjustLabel
+          Left = 8
+          Height = 13
+          Top = 12
+          Width = 56
+          Caption = 'alMaxWidth'
+          ParentColor = False
+          AttachedEdit = neMaxWidth
+        end
+        object alMaxHeight: TAdjustLabel
+          Left = 202
+          Height = 13
+          Top = 12
+          Width = 59
+          Caption = 'alMaxHeight'
+          ParentColor = False
+          AttachedEdit = neMaxHeight
+        end
+        object neMaxWidth: TNumberEdit
+          Left = 130
+          Height = 21
+          Top = 8
+          Width = 57
+          TabOrder = 0
+          Text = '1'
+          Min = 1
+          Max = 20000
+          Increment = 1
+        end
+        object neMaxHeight: TNumberEdit
+          Left = 322
+          Height = 21
+          Top = 8
+          Width = 57
+          Anchors = [akTop, akRight]
+          TabOrder = 1
+          Text = '1'
+          Min = 1
+          Max = 20000
+          Increment = 1
+        end
+      end
+    end
+    object tsEnvironment: TTabSheet
+      ClientHeight = 263
+      ClientWidth = 401
+      object lDVM: TLabel
+        Left = 8
+        Height = 1
+        Top = 108
+        Width = 1
+        ParentColor = False
+      end
+      object lMWA: TLabel
+        Left = 8
+        Height = 1
+        Top = 134
+        Width = 1
+        ParentColor = False
+      end
+      object gbColors: TGroupBox
+        Left = 8
+        Height = 89
+        Top = 10
+        Width = 388
+        Anchors = [akTop, akLeft, akRight]
+        ClientHeight = 71
+        ClientWidth = 384
+        TabOrder = 0
+        object sHatch1: TShape
+          Cursor = crHandPoint
+          Left = 120
+          Height = 25
+          Top = 8
+          Width = 25
+          OnMouseDown = ShapeMouseDown
+        end
+        object sHatch2: TShape
+          Cursor = crHandPoint
+          Left = 152
+          Height = 25
+          Top = 8
+          Width = 25
+          OnMouseDown = ShapeMouseDown
+        end
+        object lTransparentHatch: TLabel
+          Left = 8
+          Height = 13
+          Top = 14
+          Width = 89
+          Caption = 'lTransparentHatch'
+          ParentColor = False
+        end
+        object sGrid2: TShape
+          Cursor = crHandPoint
+          Left = 152
+          Height = 25
+          Top = 40
+          Width = 25
+          OnMouseDown = ShapeMouseDown
+        end
+        object sGrid1: TShape
+          Cursor = crHandPoint
+          Left = 120
+          Height = 25
+          Top = 40
+          Width = 25
+          OnMouseDown = ShapeMouseDown
+        end
+        object lGrid: TLabel
+          Left = 8
+          Height = 13
+          Top = 46
+          Width = 21
+          Caption = 'lGrid'
+          ParentColor = False
+        end
+        object sGrid2_1: TShape
+          Cursor = crHandPoint
+          Left = 322
+          Height = 25
+          Top = 8
+          Width = 25
+          Anchors = [akTop, akRight]
+          OnMouseDown = ShapeMouseDown
+        end
+        object sGrid2_2: TShape
+          Cursor = crHandPoint
+          Left = 354
+          Height = 25
+          Top = 8
+          Width = 25
+          Anchors = [akTop, akRight]
+          OnMouseDown = ShapeMouseDown
+        end
+        object lGrid2: TLabel
+          Left = 184
+          Height = 13
+          Top = 14
+          Width = 27
+          Caption = 'lGrid2'
+          ParentColor = False
+        end
+        object bResetColors: TButton
+          Left = 234
+          Height = 25
+          Top = 40
+          Width = 147
+          Anchors = [akTop, akRight]
+          Caption = 'bResetColors'
+          OnClick = bResetColorsClick
+          TabOrder = 0
+        end
+      end
+      object cbDVM: TComboBox
+        Left = 203
+        Height = 21
+        Top = 104
+        Width = 193
+        Anchors = [akTop, akRight]
+        ItemHeight = 13
+        Style = csDropDownList
+        TabOrder = 1
+      end
+      object cbSaveToolSettings: TCheckBox
+        Left = 8
+        Height = 19
+        Top = 162
+        Width = 20
+        TabOrder = 2
+      end
+      object cbMWA: TComboBox
+        Left = 203
+        Height = 21
+        Top = 130
+        Width = 193
+        Anchors = [akTop, akRight]
+        ItemHeight = 13
+        Style = csDropDownList
+        TabOrder = 3
+      end
+    end
+    object tsInstall: TTabSheet
+      ClientHeight = 263
+      ClientWidth = 401
+      ImageIndex = 1
+      object lAdminMode: TLabel
+        Left = 8
+        Height = 41
+        Top = 210
+        Width = 388
+        AutoSize = False
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+        WordWrap = True
+      end
+      object gbFileAssoc: TGroupBox
+        Left = 8
+        Height = 186
+        Top = 10
+        Width = 388
+        ClientHeight = 168
+        ClientWidth = 384
+        TabOrder = 0
+        object cbICO: TCheckBox
+          Left = 104
+          Height = 19
+          Top = 8
+          Width = 39
+          Caption = 'ICO'
+          TabOrder = 0
+        end
+        object cbCUR: TCheckBox
+          Left = 200
+          Height = 19
+          Top = 8
+          Width = 41
+          Caption = 'CUR'
+          TabOrder = 1
+        end
+        object cbPNG: TCheckBox
+          Left = 104
+          Height = 19
+          Top = 34
+          Width = 40
+          Caption = 'PNG'
+          TabOrder = 3
+        end
+        object cbXPM: TCheckBox
+          Left = 200
+          Height = 19
+          Top = 34
+          Width = 40
+          Caption = 'XPM'
+          TabOrder = 4
+        end
+        object cbJPEG: TCheckBox
+          Left = 8
+          Height = 19
+          Top = 60
+          Width = 44
+          Caption = 'JPEG'
+          TabOrder = 6
+        end
+        object cbBMP: TCheckBox
+          Left = 296
+          Height = 19
+          Top = 34
+          Width = 40
+          Caption = 'BMP'
+          TabOrder = 5
+        end
+        object cbANI: TCheckBox
+          Left = 296
+          Height = 19
+          Top = 8
+          Width = 38
+          Caption = 'ANI'
+          TabOrder = 2
+        end
+        object cbGIF: TCheckBox
+          Left = 104
+          Height = 19
+          Top = 60
+          Width = 37
+          Caption = 'GIF'
+          TabOrder = 7
+        end
+        object cbPCX: TCheckBox
+          Left = 8
+          Height = 19
+          Top = 86
+          Width = 39
+          Caption = 'PCX'
+          TabOrder = 8
+        end
+        object cbGFIE: TCheckBox
+          Left = 8
+          Height = 19
+          Top = 8
+          Width = 43
+          Caption = 'GFIE'
+          TabOrder = 9
+        end
+        object cbICL: TCheckBox
+          Left = 296
+          Height = 19
+          Top = 86
+          Width = 36
+          Caption = 'ICL'
+          TabOrder = 10
+        end
+        object cbICNS: TCheckBox
+          Left = 8
+          Height = 19
+          Top = 34
+          Width = 44
+          Caption = 'ICNS'
+          TabOrder = 11
+        end
+        object cbJpeg2000: TCheckBox
+          Left = 296
+          Height = 19
+          Top = 60
+          Width = 71
+          Caption = 'JPEG 2000'
+          TabOrder = 12
+        end
+        object cbTIFF: TCheckBox
+          Left = 200
+          Height = 19
+          Top = 60
+          Width = 42
+          Caption = 'TIFF'
+          TabOrder = 13
+        end
+        object cbSVG: TCheckBox
+          Left = 200
+          Height = 19
+          Top = 86
+          Width = 39
+          Caption = 'SVG'
+          TabOrder = 14
+        end
+        object cbTGA: TCheckBox
+          Left = 104
+          Height = 19
+          Top = 86
+          Width = 40
+          Caption = 'TGA'
+          TabOrder = 15
+        end
+        object cbPBM: TCheckBox
+          Left = 8
+          Height = 19
+          Top = 112
+          Width = 40
+          Caption = 'PBM'
+          TabOrder = 16
+        end
+        object cbPGM: TCheckBox
+          Left = 104
+          Height = 19
+          Top = 112
+          Width = 41
+          Caption = 'PGM'
+          TabOrder = 17
+        end
+        object cbPNM: TCheckBox
+          Left = 200
+          Height = 19
+          Top = 112
+          Width = 41
+          Caption = 'PNM'
+          TabOrder = 18
+        end
+        object cbPPM: TCheckBox
+          Left = 296
+          Height = 19
+          Top = 112
+          Width = 40
+          Caption = 'PPM'
+          TabOrder = 19
+        end
+        object cbWEBP: TCheckBox
+          Left = 8
+          Height = 19
+          Top = 136
+          Width = 48
+          Caption = 'WEBP'
+          TabOrder = 20
+        end
+      end
+    end
+  end
+end

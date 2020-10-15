@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="gfiec" />
+		<Option pch_mode="2" />
+		<Option compiler="mingw_32" />
+		<Build>
+			<Target title="Release64">
+				<Option output="../libgfie64c" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release64/" />
+				<Option type="3" />
+				<Option compiler="mingw_64" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wl,--kill-at" />
+					<Add option="-static-libgcc" />
+					<Add option="-static-libstdc++" />
+					<Add option="-march=nocona" />
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-O3" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-static" />
+				</Linker>
+			</Target>
+			<Target title="Release32">
+				<Option output="../libgfie32c" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release32/" />
+				<Option type="3" />
+				<Option compiler="mingw_32" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wl,--kill-at" />
+					<Add option="-static-libgcc" />
+					<Add option="-static-libstdc++" />
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-O3" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-static" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseLinux64">
+				<Option output="../gfie64c" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/ReleaseLinux64/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-m64" />
+					<Add option="-O3" />
+					<Add option="-fPIC" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+				</Linker>
+			</Target>
+			<Target title="ReleaseLinux32">
+				<Option output="../gfie32c" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/ReleaseLinux32/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-m32" />
+					<Add option="-O3" />
+					<Add option="-fPIC" />
+				</Compiler>
+				<Linker>
+					<Add option="-m32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="giflib" />
+			<Add directory="libpng" />
+			<Add directory="openjpeg" />
+			<Add directory="zlib" />
+		</Compiler>
+		<Unit filename="imgformats.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="imgformats.h" />
+		<Unit filename="libpng/png.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libpng/png.h" />
+		<Unit filename="libpng/pngconf.h" />
+		<Unit filename="libpng/pngdebug.h" />
+		<Unit filename="libpng/pngerror.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libpng/pngget.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libpng/pnginfo.h" />
+		<Unit filename="libpng/pnglibconf.h" />
+		<Unit filename="libpng/pngmem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libpng/pngpread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libpng/pngpriv.h" />
+		<Unit filename="libpng/pngread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libpng/pngrio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libpng/pngrtran.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libpng/pngrutil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libpng/pngset.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libpng/pngstruct.h" />
+		<Unit filename="libpng/pngtrans.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libpng/pngwio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libpng/pngwrite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libpng/pngwtran.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libpng/pngwutil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/bio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/bio.h" />
+		<Unit filename="openjpeg/cio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/cio.h" />
+		<Unit filename="openjpeg/dwt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/dwt.h" />
+		<Unit filename="openjpeg/event.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/event.h" />
+		<Unit filename="openjpeg/fix.h" />
+		<Unit filename="openjpeg/image.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/image.h" />
+		<Unit filename="openjpeg/int.h" />
+		<Unit filename="openjpeg/j2k.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/j2k.h" />
+		<Unit filename="openjpeg/j2k_lib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/j2k_lib.h" />
+		<Unit filename="openjpeg/jp2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/jp2.h" />
+		<Unit filename="openjpeg/jpt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/jpt.h" />
+		<Unit filename="openjpeg/mct.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/mct.h" />
+		<Unit filename="openjpeg/mqc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/mqc.h" />
+		<Unit filename="openjpeg/openjpeg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/openjpeg.h" />
+		<Unit filename="openjpeg/opj_config.h" />
+		<Unit filename="openjpeg/opj_includes.h" />
+		<Unit filename="openjpeg/opj_malloc.h" />
+		<Unit filename="openjpeg/pi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/pi.h" />
+		<Unit filename="openjpeg/raw.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/raw.h" />
+		<Unit filename="openjpeg/t1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/t1.h" />
+		<Unit filename="openjpeg/t1_generate_luts.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/t1_luts.h" />
+		<Unit filename="openjpeg/t2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/t2.h" />
+		<Unit filename="openjpeg/tcd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/tcd.h" />
+		<Unit filename="openjpeg/tgt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="openjpeg/tgt.h" />
+		<Unit filename="zlib/adler32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zlib/compress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zlib/crc32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zlib/crc32.h" />
+		<Unit filename="zlib/deflate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zlib/deflate.h" />
+		<Unit filename="zlib/gzclose.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zlib/gzguts.h" />
+		<Unit filename="zlib/gzlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zlib/gzread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zlib/gzwrite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zlib/infback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zlib/inffast.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zlib/inffast.h" />
+		<Unit filename="zlib/inffixed.h" />
+		<Unit filename="zlib/inflate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zlib/inflate.h" />
+		<Unit filename="zlib/inftrees.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zlib/inftrees.h" />
+		<Unit filename="zlib/trees.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zlib/trees.h" />
+		<Unit filename="zlib/uncompr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zlib/zconf.h" />
+		<Unit filename="zlib/zlib.h" />
+		<Unit filename="zlib/zutil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="zlib/zutil.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

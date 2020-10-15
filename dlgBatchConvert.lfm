@@ -1,0 +1,158 @@
+object frmBatchConvert: TfrmBatchConvert
+  Left = 396
+  Height = 377
+  Top = 171
+  Width = 401
+  BorderStyle = bsToolWindow
+  ClientHeight = 377
+  ClientWidth = 401
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.1'
+  object gbFiles: TGroupBox
+    Left = 8
+    Height = 177
+    Top = 8
+    Width = 385
+    ClientHeight = 159
+    ClientWidth = 381
+    TabOrder = 0
+    object lb: TListBox
+      Left = 8
+      Height = 121
+      Top = 0
+      Width = 369
+      ItemHeight = 0
+      TabOrder = 0
+    end
+    object bAdd: TButton
+      Left = 8
+      Height = 25
+      Top = 128
+      Width = 89
+      OnClick = bAddClick
+      TabOrder = 1
+    end
+    object bClear: TButton
+      Left = 104
+      Height = 25
+      Top = 128
+      Width = 89
+      OnClick = bClearClick
+      TabOrder = 2
+    end
+  end
+  object gbSettings: TGroupBox
+    Left = 8
+    Height = 145
+    Top = 192
+    Width = 385
+    ClientHeight = 127
+    ClientWidth = 381
+    TabOrder = 1
+    OnClick = gbSettingsClick
+    object lFormat: TLabel
+      Left = 8
+      Height = 13
+      Top = 4
+      Width = 6
+      Caption = 'X'
+      ParentColor = False
+    end
+    object lFolder: TLabel
+      Left = 8
+      Height = 13
+      Top = 36
+      Width = 6
+      Caption = 'X'
+      ParentColor = False
+    end
+    object cbFormat: TComboBox
+      Left = 152
+      Height = 21
+      Top = 0
+      Width = 225
+      ItemHeight = 13
+      ItemIndex = 0
+      Items.Strings = (
+        '-'
+      )
+      OnChange = cbFormatChange
+      Style = csDropDownList
+      TabOrder = 0
+      Text = '-'
+    end
+    object bIconFormats: TButton
+      Left = 8
+      Height = 25
+      Top = 92
+      Width = 185
+      OnClick = bIconFormatsClick
+      TabOrder = 1
+    end
+    object cbOpen: TCheckBox
+      Left = 8
+      Height = 19
+      Top = 64
+      Width = 20
+      Checked = True
+      State = cbChecked
+      TabOrder = 2
+    end
+    object eFolder: TEdit
+      Left = 152
+      Height = 21
+      Top = 32
+      Width = 185
+      TabOrder = 3
+    end
+    object bFolder: TButton
+      Left = 344
+      Height = 25
+      Top = 32
+      Width = 33
+      Caption = '...'
+      OnClick = bFolderClick
+      TabOrder = 4
+    end
+    object bSaveOptions: TButton
+      Left = 206
+      Height = 25
+      Top = 92
+      Width = 168
+      OnClick = bSaveOptionsClick
+      TabOrder = 5
+    end
+  end
+  object bOK: TButton
+    Left = 240
+    Height = 25
+    Top = 344
+    Width = 75
+    Default = True
+    OnClick = bOKClick
+    TabOrder = 2
+  end
+  object bCancel: TButton
+    Left = 320
+    Height = 25
+    Top = 344
+    Width = 75
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 3
+  end
+  object pb: TProgressBar
+    Left = 8
+    Height = 25
+    Top = 344
+    Width = 225
+    Max = 0
+    TabOrder = 4
+    Visible = False
+  end
+end

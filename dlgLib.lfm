@@ -1,0 +1,137 @@
+object LibraryFrame: TLibraryFrame
+  Left = 279
+  Height = 470
+  Top = 199
+  Width = 607
+  Align = alClient
+  ClientHeight = 470
+  ClientWidth = 607
+  OnMouseMove = FormMouseMove
+  LCLVersion = '1.1'
+  object pToolbar: TPanel
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 607
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 26
+    ClientWidth = 607
+    Color = clForm
+    ParentColor = False
+    TabOrder = 0
+    OnMouseMove = FormMouseMove
+    object sbAdd: TSpeedButton
+      Left = 32
+      Height = 24
+      Top = 0
+      Width = 24
+      Flat = True
+      OnClick = sbAddClick
+      OnMouseMove = ControlMouseMove
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object sbRemove: TSpeedButton
+      Left = 56
+      Height = 24
+      Top = 0
+      Width = 24
+      Flat = True
+      OnClick = sbRemoveClick
+      OnMouseMove = ControlMouseMove
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object sbReplace: TSpeedButton
+      Left = 80
+      Height = 24
+      Top = 0
+      Width = 24
+      Flat = True
+      OnClick = sbReplaceClick
+      OnMouseMove = ControlMouseMove
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object sbProperties: TSpeedButton
+      Left = 112
+      Height = 24
+      Top = 0
+      Width = 24
+      Flat = True
+      OnClick = sbPropertiesClick
+      OnMouseMove = ControlMouseMove
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object sbExtractEdit: TSpeedButton
+      Left = 136
+      Height = 24
+      Top = 0
+      Width = 24
+      Flat = True
+      OnClick = sbExtractEditClick
+      OnMouseMove = ControlMouseMove
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object Bevel1: TBevel
+      Left = 108
+      Height = 20
+      Top = 2
+      Width = 4
+      Shape = bsLeftLine
+    end
+    object sbExtractSave: TSpeedButton
+      Left = 160
+      Height = 24
+      Top = 0
+      Width = 24
+      Flat = True
+      OnClick = sbExtractSaveClick
+      OnMouseMove = ControlMouseMove
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object sbSave: TSpeedButton
+      Left = 0
+      Height = 24
+      Top = 0
+      Width = 24
+      Flat = True
+      OnClick = sbSaveClick
+      OnMouseMove = ControlMouseMove
+      ShowHint = True
+      ParentShowHint = False
+    end
+    object Bevel2: TBevel
+      Left = 28
+      Height = 20
+      Top = 2
+      Width = 4
+      Shape = bsLeftLine
+    end
+  end
+  object lb: TgfListBox
+    Left = 0
+    Height = 444
+    Top = 26
+    Width = 607
+    MultiSelect = True
+    Layout = lbloHorizontal
+    ItemWidth = 100
+    ItemHeight = 100
+    OnGetCount = lbGetCount
+    OnItemGetSelected = lbItemGetSelected
+    OnItemPaint = lbItemPaint
+    OnItemSetSelected = lbItemSetSelected
+    OnListDblClick = lbListDblClick
+    OnListMouseMove = lbListMouseMove
+    Align = alClient
+    Color = clWhite
+    ParentColor = False
+    OnKeyDown = lbKeyDown
+    OnResize = lbResize
+  end
+end

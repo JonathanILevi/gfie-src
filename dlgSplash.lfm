@@ -1,0 +1,36 @@
+object frmSplash: TfrmSplash
+  Left = 514
+  Height = 149
+  Top = 380
+  Width = 251
+  AlphaBlend = True
+  BorderStyle = bsNone
+  ClientHeight = 149
+  ClientWidth = 251
+  Color = clWhite
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  FormStyle = fsStayOnTop
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '0.9.30.2'
+  Visible = True
+  object imSplash: TImage
+    Left = 0
+    Height = 149
+    Top = 0
+    Width = 251
+    Align = alClient
+    OnMouseDown = imSplashMouseDown
+  end
+  object tmFadeOut: TTimer
+    Enabled = False
+    Interval = 40
+    OnTimer = tmFadeOutTimer
+    left = 184
+    top = 8
+  end
+end

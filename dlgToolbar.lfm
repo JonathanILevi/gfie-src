@@ -1,0 +1,11 @@
+object ToolbarFrame: TToolbarFrame
+  Left = 0
+  Height = 72
+  Top = 0
+  Width = 175
+  LCLVersion = '0.9.30.3'
+  OnMouseMove = FrameMouseMove
+  TabOrder = 0
+  DesignLeft = 338
+  DesignTop = 198
+end

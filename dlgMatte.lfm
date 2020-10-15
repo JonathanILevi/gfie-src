@@ -1,0 +1,64 @@
+inherited frmRemoveMatte: TfrmRemoveMatte
+  Left = 348
+  Height = 114
+  Top = 343
+  Width = 201
+  BorderStyle = bsToolWindow
+  ClientHeight = 114
+  ClientWidth = 201
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  object lMatteColor: TLabel[0]
+    Left = 8
+    Height = 1
+    Top = 12
+    Width = 1
+    ParentColor = False
+  end
+  object sMatte: TShape[1]
+    Cursor = crHandPoint
+    Left = 80
+    Height = 25
+    Top = 8
+    Width = 65
+    OnMouseDown = sMatteMouseDown
+  end
+  object bWhiteMatte: TButton[2]
+    Left = 8
+    Height = 25
+    Top = 48
+    Width = 89
+    OnClick = bWhiteMatteClick
+    TabOrder = 0
+  end
+  object bBlackMatte: TButton[3]
+    Left = 8
+    Height = 25
+    Top = 80
+    Width = 89
+    OnClick = bBlackMatteClick
+    TabOrder = 1
+  end
+  object bOK: TButton[4]
+    Left = 120
+    Height = 25
+    Top = 48
+    Width = 75
+    Default = True
+    ModalResult = 1
+    TabOrder = 2
+  end
+  object bCancel: TButton[5]
+    Left = 120
+    Height = 25
+    Top = 80
+    Width = 75
+    Cancel = True
+    ModalResult = 2
+    TabOrder = 3
+  end
+end
